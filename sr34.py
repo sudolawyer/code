@@ -1,4 +1,9 @@
 ```python
+# Created by Stephan S. Dalal
+# 3-27-2017
+# For: Python 3
+# Affiliation: Georgetown Univetrsity Law; Washington, DC
+
 import sys
 import re
 import os
