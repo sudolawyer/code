@@ -1,8 +1,9 @@
 ```Python
 # This script will scan a plain text document looking for legal citations in the document.
 # It will then print all of the unique citations, line by line, as well as the total number
-# of unique citations used in craft the opinion.  For example, the Chevron opinion relies on
-# 50 unique cases.
+# of unique citations used to craft the opinion.  In this example I use Chevron, which cites 
+# 50 unique cases throughout the opinion.
+
 
 #Created by: Stephan S. Dalal
 #Affiliation: Georgetown Law
@@ -25,3 +26,4 @@ def opinionCitation(opinionString):
     print("TOTAL UNIQUE CITATIONS: ", uniqueMatches)
     
 opinionCitation(opinionString)
+```
