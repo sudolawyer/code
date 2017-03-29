@@ -20,6 +20,9 @@ def opinionCitation(opinionString):
     match = re.findall(citationRegex, opinionString)
     print(match)
     uniqueMatches=len(match)
+    print("TOTAL UNIQUE CITATIONS: ", uniqueMatches)
+    
+    # if you want to output each cite on its own line, use this for loop
     for each in match:
         matches = each.split('\n')
         print(matches)
