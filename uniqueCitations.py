@@ -16,7 +16,7 @@ opinionString = open("chevron.txt", encoding="utf-8", errors="ignore").read() #s
 
 def opinionCitation(opinionString):
 
-    citationRegex = '\d{1,3} U.S. \d{1,3}'
+    citationRegex = '\d{1,3} U.S. \d{1,4}'
     match = re.findall(citationRegex, opinionString)
     print(match)
     uniqueMatches=len(match)
