@@ -11,22 +11,34 @@
 #Date: March 2017
 
 import re
+import requests
 
-opinionString = open("chevron.txt", encoding="utf-8", errors="ignore").read() #some unicode error magic
+opinionString = open("chevron.txt", encoding="utf-8", errors="ignore").read()
 
 def opinionCitation(opinionString):
-
+    
     citationRegex = '\d{1,3} U.S. \d{1,4}'
     match = re.findall(citationRegex, opinionString)
-    print(match)
-    uniqueMatches=len(match)
-    print("TOTAL UNIQUE CITATIONS: ", uniqueMatches)
+    uniqueMatches = len(match)
+    citationElement=True
+    citationReplace=True
     
-    # if you want to output each cite on its own line, use this for loop
-    for each in match:
-        matches = each.split('\n')
-        print(matches)
-    print("TOTAL UNIQUE CITATIONS: ", uniqueMatches)
-    
-opinionCitation(opinionString)
-```
+    i = 0
+    j = -1
+    while i < int(uniqueMatches):
+        
+        citationElement=match[i]
+        citationReplace = citationElement.replace(" ", "+")
+        baseURL = "https://www.courtlistener.com/?type=o&q="
+        endURL="&type=o&order_by=score+desc&start_Precedential=on"
+        URL=True
+        
+        while j <= i:
+            
+            URL = (baseURL + citationReplace + endURL)
+            print(URL)
+            j+=1
+
+
+        #print("Citation ELEMENT FOR i: ", i, "is ", citationElement)
+        i +=1
