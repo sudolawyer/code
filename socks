@@ -10,7 +10,7 @@
 
 connect to the Unix Stack and instruct your computer to establish a secure socks proxy operating on port 7070, like this:
 
-```
+```sh
 >>ssh uniID@cunix.cc.columbia.edu -D 7070
 >>login as: uniID
 >>uniID@cunix.cc.columbia.edu's password:
