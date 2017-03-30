@@ -97,7 +97,7 @@ Port: 7070
 * Then Click "OK" (again)
 * Then Click "OK" (one last time)
 * Before going on to Task 4, please read this very important note.
-NOTE: You have just told chrome to tunnel all of your internet traffic through the CUNIX server first, and then outward from Columbia's servers.  This means that you MUST have a valid connection the CUNIX-PRIVATE in order for your internet connection to work.  If you loose connection to CUNIX-PRIVATE, which can happen, you will have to re-connect (Task 2) or you will have to disable your network settings in Chrome.  That's fine.  You may not always want to use your proxy.  If you loose internet, this is what you should do.
+NOTE: You have just told chrome to tunnel all of your internet traffic through the CUNIX server first, and then outward from Columbia's servers.  This means that you MUST have a valid connection the CUNIX-PRIVATE in order for your internet connection to work.  If you lose connection to CUNIX-PRIVATE, which can happen, you will have to re-connect (Task 2) or you will have to disable your network settings in Chrome.  That's fine.  You may not always want to use your proxy.  If you lose internet, this is what you should do.
 * Open Chrome settings
 * "Change Proxy Settings"
 * "LAN settings"
@@ -106,7 +106,7 @@ NOTE: You have just told chrome to tunnel all of your internet traffic through t
 
 ## Task 4: Verify your secure IP Address
 
-Go back to: https://www.iplocation.net/find-ip-address.  Notice your IP address and locaion.  It should NOT be the same IP address you started with, and it should say you are in New York, regardless of whether you are, in fact, in New York.  I am currently in Washington, DC, but everyone on the web, including the prying eyes of my ISP think I'm in New York, and can't see ANY of my traffic.
+Go back to: https://www.iplocation.net/find-ip-address.  Notice your IP address and location.  It should NOT be the same IP address you started with, and it should say you are in New York, regardless of whether you are, in fact, in New York.  I am currently in Washington, DC, but everyone on the web, including the prying eyes of my ISP think I'm in New York, and can't see ANY of my traffic.
 
 ## Example of a successful login
 ```sh
