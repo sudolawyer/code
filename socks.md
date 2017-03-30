@@ -1,12 +1,12 @@
-#Connecting to a secured SOCKS proxy with your Columbia University ID
+# Protecting Your Privacy Online --- Connecting to a secured SOCKS proxy with your Columbia University ID
 ## stephan s. dalal --- March 2017
 
-#Establishing a Connection to the Columbia Unix Servers
+# Establishing a Connection to the Columbia Unix Servers
 
-##Fellow Lions, you may not be surprised that Columbia hosts some of the most powerful UNIX stacks.  You may be surprised to know that every student enjoys lifetime (as of now) access to the UNIX stack.
+### Fellow Lions, you may not be surprised that Columbia hosts some of the most powerful UNIX stacks.  You may be surprised to know that every student enjoys lifetime (as of now) access to the UNIX stack.
 
 
-(1) Download Putty, which is a free software available here: 
+(1) Download Putty, which is a free software available here: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi
 
 connect to the Unix Stack and instruct your computer to establish a secure socks proxy operating on port 7070, like this:
 
