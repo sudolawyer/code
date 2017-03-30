@@ -1,14 +1,45 @@
-# Protecting Your Privacy Online --- Connecting to a secured SOCKS proxy with your Columbia University ID
-## stephan s. dalal --- March 2017
+# PROTECTING YOUR ONLINE PRIVACY: How to establish a secure socks proxy through Columbia's UNIX server
+### Stephan S. Dalal --- March 2017
 
-# Establishing a Connection to the Columbia Unix Servers
+### Fellow Lions, you may not be surprised that Columbia hosts some of the most powerful UNIX stacks on the planet.  The School uses these computer resources for research, crunching very large numbers, and other related tasks.  What you may be surprised to learn is that all Columbia students have access to the server, for life.  Here's quick guide for how to set-up your own secure connection to the internet, that will protect your privacy by encrypting your HTTP traffic for every webservice you visit on the web.  In practical terms, this means your ISP will not be able to view your browsing history.  This guide is for Windows users.  An OSX guide is coming soon.  Always know what you're doing.  I take no responsibility for any computer mishaps.  If you follow this guide, you should not run into any issues.
 
-### Fellow Lions, you may not be surprised that Columbia hosts some of the most powerful UNIX stacks.  You may be surprised to know that every student enjoys lifetime (as of now) access to the UNIX stack.
-
+## Task 1: Install Putty
 
 (1) Download Putty, which is a free software available here: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi
+(2) Install Putty on your computer.  When it's finished installing, search for 'Putty'.  Here is what the icon looks like: https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png.
+(3) Open Putty.  Should should see this window: https://en.wikipedia.org/wiki/PuTTY#/media/File:PuTTY_Ubuntu.png (note, this is the view if you're using Linux.  Don't worry about not seeing the Terminal (black window). 
 
-connect to the Unix Stack and instruct your computer to establish a secure socks proxy operating on port 7070, like this:
+### Subtask for Setting up Putty
+* Under "Host Name" type:
+```sh
+cunix.cc.columbia.edu
+```
+* Under "Port" type:
+```sh
+22
+```
+* Under "Saved Sessions, which should be blank, type:
+```sh
+CUNIX-PRIVATE
+```
+* Then, click "Save"
+* Notice the menu to the left. Scroll down and expand "SSH".  Then, click on "Tunnels"
+* In "Source Port," type: 7070
+* In "Destination," type: D
+* Select "Dynamic" and "Auto"
+* Click Add (you should now see D7070 inside the application window box)
+* To back to the left menu; scroll back up to "Session"
+* Click Save (again)
+
+You now should have a saved profile for your secure connection to the CUNIX servers.
+
+## Task 2: Connect to CUNIX
+
+With Putty Open,
+
+## Task 3: Configure Web browser
+
+## Task 3: Verify your secure IP Address
 
 ```sh
 >>ssh uniID@cunix.cc.columbia.edu -D 7070
