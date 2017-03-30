@@ -5,9 +5,9 @@
 
 ## Task 1: Install Putty
 
-(1) Download Putty, which is a free software available here: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi
-(2) Install Putty on your computer.  When it's finished installing, search for 'Putty'.  Here is what the icon looks like: https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png.
-(3) Open Putty.  Should should see this window: https://en.wikipedia.org/wiki/PuTTY#/media/File:PuTTY_Ubuntu.png (note, this is the view if you're using Linux.  Don't worry about not seeing the Terminal (black window). 
+* (1) Download Putty, which is a free software available here: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi
+* (2) Install Putty on your computer.  When it's finished installing, search for 'Putty'.  Here is what the icon looks like: https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png.
+* (3) Open Putty.  Should should see this window: https://en.wikipedia.org/wiki/PuTTY#/media/File:PuTTY_Ubuntu.png (note, this is the view if you're using Linux.  Don't worry about not seeing the Terminal (black window). 
 
 ### Subtask for Setting up Putty
 * Under "Host Name" type:
@@ -35,9 +35,63 @@ You now should have a saved profile for your secure connection to the CUNIX serv
 
 ## Task 2: Connect to CUNIX
 
-With Putty Open,
+* With Putty Open, click on your newly created CUNIX-PRIVATE profile so it is highlighted in blue
+* Then Click Load (a black terminal window should now appear)
+* If this is your first time connecting, you may get a message asking you if you want to connect.  You should respond "Yes"
+* You should then be prompted for your login, like this:
+```sh
+login as: yourUNI
+```
+* Do not enter @columbia.edu.  Your login name is just your uni.
+* You will then be prompted for a password, like this:
+```sh
+uniID@cunix.cc.columbia.edu's password: [enter your password] [then hit "Enter"]
+```
+* NOTE: as you type your password, you WILL NOT see any characters.  This is a security feature of the secure shell you are using
+* You should now see a welcome message that reads:
+```sh
+Last login: Mon Mar 13 22:07:00 2017 from xxx.xxx.xxx.xxx
+-bash-4.1$
+```
+* If you see this, congrats!  You are now logged into the CUNIX server.  Let's try to send a command to the server just to make sure
+* Type the following:
+```sh
+-bash-4.1$ pwd
+```
+* You should see what is called the Present Working Directory (pwd), which is your current location in the CUNIX universe.
+* Want a more interesting command?  Type:
+```sh
+-bash-4.1$ who
+```
+* You should now have a listing of every other Lion who is currently logged in
+* Want to clear your screen? Type:
+```sh
+-bash-4.1$ clear
+```
+* Now that your connection has been opened, you should minimize Putty (BUT KEEP THE TERMINAL OPEN TO MAINTAIN THE CONNECTION)
+* On to Task 3
 
 ## Task 3: Configure Web browser
+
+I will assume you are using Chrome, since a good majority of the world uses Chrome.  Future iterations of this guide will have instructions for FireFox, but the instructions are pretty similar.
+
+* Open Chrome, and go to settings, and then select "show advanced settings"
+* Find "Change Proxy Settings" under the "Network Sub-menu"
+* Under "Connections," at the bottom, click "LAN Settings"
+* A new window should pop-up
+* At the bottom, put a check mark next to "Use a proxy server for your LAN (These settings will ....)
+* Then Click "Advanced" (but it's not really advanced, I promise)
+* Notice the "Socks:" field? Type: 
+```sh
+Socks: localhost
+```
+* Enter the port number (quiz: do you remember it?)
+```sh
+Port: 7070
+```
+* Then Click "OK"
+* Then Click "OK" (again)
+
 
 ## Task 3: Verify your secure IP Address
 
