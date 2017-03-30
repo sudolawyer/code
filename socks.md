@@ -3,11 +3,15 @@
 
 ### Fellow Lions, you may not be surprised that Columbia hosts some of the most powerful UNIX stacks on the planet.  The School uses these computer resources for research, crunching very large numbers, and other related tasks.  What you may be surprised to learn is that all Columbia students have access to the server, for life.  Here's quick guide for how to set-up your own secure connection to the internet, that will protect your privacy by encrypting your HTTP traffic for every webservice you visit on the web.  In practical terms, this means your ISP will not be able to view your browsing history.  This guide is for Windows users.  An OSX guide is coming soon.  Always know what you're doing.  I take no responsibility for any computer mishaps.  If you follow this guide, you should not run into any issues.
 
+## Obtaining your current IP
+Open Google, and go to: https://www.iplocation.net/find-ip-address.  Notice your IP address (write it down somewhere), and notice how the service knows your general location and ISP, etc... So Congress wants to allow ISPs to sell your data.  Let's get on with it...
+
 ## Task 1: Install Putty
 
 * (1) Download Putty, which is a free software available here: https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.68-installer.msi
 * (2) Install Putty on your computer.  When it's finished installing, search for 'Putty'.  Here is what the icon looks like: https://upload.wikimedia.org/wikipedia/commons/b/b6/PuTTY_icon_128px.png.
 * (3) Open Putty.  Should should see this window: https://en.wikipedia.org/wiki/PuTTY#/media/File:PuTTY_Ubuntu.png (note, this is the view if you're using Linux.  Don't worry about not seeing the Terminal (black window). 
+
 
 ### Subtask for Setting up Putty
 * Under "Host Name" type:
@@ -91,17 +95,24 @@ Port: 7070
 ```
 * Then Click "OK"
 * Then Click "OK" (again)
+* Then Click "OK" (one last time)
+* Before going on to Task 4, please read this very important note.
+NOTE: You have just told chrome to tunnel all of your internet traffic through the CUNIX server first, and then outward from Columbia's servers.  This means that you MUST have a valid connection the CUNIX-PRIVATE in order for your internet connection to work.  If you loose connection to CUNIX-PRIVATE, which can happen, you will have to re-connect (Task 2) or you will have to disable your network settings in Chrome.  That's fine.  You may not always want to use your proxy.  If you loose internet, this is what you should do.
+* Open Chrome settings
+* "Change Proxy Settings"
+* "LAN settings"
+* And then just un-check the "Use a proxy server for your LAN"
+* Your Socks settings will be preserved in Chrome, so you can always activate the network settings by following Task 3 up until 5th subtask (or fourtheth if we're zero indexing, in which case you probably don't need this guide and can help me help others protect their privacy on the web).
 
+## Task 4: Verify your secure IP Address
 
-## Task 3: Verify your secure IP Address
+Go back to: https://www.iplocation.net/find-ip-address.  Notice your IP address and locaion.  It should NOT be the same IP address you started with, and it should say you are in New York, regardless of whether you are, in fact, in New York.  I am currently in Washington, DC, but everyone on the web, including the prying eyes of my ISP think I'm in New York, and can't see ANY of my traffic.
 
+## Example of a successful login
 ```sh
->>ssh uniID@cunix.cc.columbia.edu -D 7070
->>login as: uniID
->>uniID@cunix.cc.columbia.edu's password:
->>Last login: Mon Mar 13 21:31:10 2017 from 64.94.31.206
--bash-4.1$ #note the "$" symbol means you have accessed the server and are now sitting in your personal directory
-$ ls # to list your files (there may be none)
-$ mkdir [name of some folder]
-$ ls # you should now see [name of some folder]
+login as: uniID
+uniID@cunix.cc.columbia.edu's password:
+Last login: Mon Mar 29 21:31:10 2017 from xxx.xxx.xxx.xxx
 ``` 
+## Final Words
+At a later date I'll write-up an explainer on exactly what we did here.  But time is of the essence, and your privacy matters.  Please share this guide with others, and encourage them to secure their own privacy.  If Congress won't protect it, it's time we took security into our own hands.  We have a lot to get going on ... ~sudolawyer
