@@ -2,7 +2,7 @@
 import requests
 import json
 
-API_KEY= "AIzaSyBzAOSUyRJolL7FTIFkCq0UDOgGT2cilzE"
+API_KEY= "EMPTY"
 baseURL = "https://www.googleapis.com/qpxExpress/v1/trips/search?key="
 URL = baseURL + API_KEY
 print(URL)
