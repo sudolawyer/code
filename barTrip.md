@@ -1,4 +1,4 @@
-'''
+```python
 import requests
 import json
 
@@ -36,4 +36,4 @@ flight = json.dumps({
 header = {'Content-Type': 'application/json'}
 response = requests.post(URL, data = flight, headers=header)
 print(response.text)
-'''
+```
